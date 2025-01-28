@@ -1,0 +1,19 @@
+{
+    "name": "ansible environment",
+    "image": "docker.io/viceo/devcontainer-ansible:latest",
+    "runArgs": ["--hostname=ansible"],
+    "mounts": ["type=bind,source=/home/${localEnv:USER}/.ssh,target=/home/dev/.ssh"],
+    "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/workspace",
+    "workspaceFolder": "/workspace",
+    "containerEnv": {
+        "ANSIBLE_CONFIG": "/workspace/ansible.cfg"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": ["redhat.ansible", "ms-azuretools.vscode-docker", "ms-vscode.makefile-tools"],
+            "settings": {
+                "python.defaultInterpreterPath": "/home/dev/venv/bin/python"
+            }
+        }
+    }
+}
