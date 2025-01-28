@@ -3,10 +3,10 @@
     "image": "docker.io/viceo/devcontainer-ansible:latest",
     "runArgs": ["--hostname=ansible"],
     "mounts": ["type=bind,source=/home/${localEnv:USER}/.ssh,target=/home/dev/.ssh"],
-    "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/${localWorkspaceFolderBasename}",
-    "workspaceFolder": "/${localWorkspaceFolderBasename}",
+    "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/workspace/${localWorkspaceFolderBasename}",
+    "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
     "containerEnv": {
-        "ANSIBLE_CONFIG": "/${localWorkspaceFolderBasename}/ansible.cfg"
+        "ANSIBLE_CONFIG": "/workspace/${localWorkspaceFolderBasename}/ansible.cfg"
     },
     "customizations": {
         "vscode": {
