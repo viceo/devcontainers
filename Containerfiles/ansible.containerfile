@@ -30,4 +30,4 @@ ENV PATH="$PATH:/home/dev/venv/bin"
 
 # Start Bash Session
 WORKDIR /home/dev
-ENTRYPOINT [ "/bin/bash", "-c", "source venv/bin/activate && exec bash" ]
+ENTRYPOINT [ "/bin/zsh", "-c", "source venv/bin/activate && exec zsh" ]
