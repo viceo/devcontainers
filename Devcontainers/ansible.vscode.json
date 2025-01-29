@@ -1,5 +1,5 @@
 {
-    "name": "ansible environment",
+    "name": "ansible",
     "image": "docker.io/viceo/devcontainer-ansible:latest",
     "runArgs": ["--hostname=ansible"],
     "mounts": ["type=bind,source=/home/${localEnv:USER}/.ssh,target=/home/dev/.ssh"],
